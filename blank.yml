@@ -1,0 +1,39 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CICDNombreUsuario
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+  branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      #- name: "Paso de Construcción"
+      #  run: echo Este es el paso de construcción!
+
+  #test:
+   # runs-on: ubuntu-latest
+    #needs: build
+    #steps:
+      
+      #- name: "Paso de Testeo"
+      #  run: echo Este es el paso de testeo!
+
+ # deploy:
+    #runs-on: ubuntu-latest
+   # needs: test
+   # steps:
+      
+     # - name: "Paso de Deploy"
+     #   run: echo Este es el paso de deploy!
